@@ -29,3 +29,10 @@ print(round(3.1))
 print(round(3.9))
 # abs is no -ve numbers
 print(abs(-20))
+
+
+# Complex Data Type
+
+# bin() returns the binary version of 5
+print(bin(5))
+print(int('0b101', 2))
