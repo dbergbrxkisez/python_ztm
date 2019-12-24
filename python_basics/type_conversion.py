@@ -13,3 +13,10 @@ b = float(a)
 c = type(b)
 print(c)
 # Type Conversion
+
+
+# Exercise
+birth_year = input('what year were you born?')
+age = 2019 - int(birth_year)
+
+print(f'your age is: {age}')
