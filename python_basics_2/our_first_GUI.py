@@ -19,16 +19,21 @@ picture = [
 
 
 fill = '*'
-empty = ''
-for row in picture:
-    for pixel in row:
-        if (pixel):               # Truthy value either 0 or 1
-            print(fill, end=" ")
-            print(fill, end=" ")
-            print(fill, end=" ")
-        else:
-            print(empty, end=" ")
-            print(empty, end=" ")
-            print(empty, end=" ")
+empty = ' '
 
-    print('')  # need a new line after every row
+
+def show_tree():
+    for image in picture:
+        for pixel in image:
+            if (pixel):               # Truthy value either 0 or 1
+                print(fill, end=" ")
+            else:
+                print(empty, end=" ")
+        print('')  # need a new line after every image
+
+
+show_tree()
+show_tree()
+show_tree()
+
+print(show_tree)  # location of function in memory
