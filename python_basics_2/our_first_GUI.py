@@ -19,4 +19,4 @@ for row in picture:
         else:
             print(' ', end=" ")
 
-    print('')
+    print('')  # need a new line after every row
