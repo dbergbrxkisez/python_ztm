@@ -1,4 +1,4 @@
-class User():
+class User(object):
     def sign_in(self):
         print('logged in')
 
@@ -26,3 +26,7 @@ archer1 = Archer('Robin', 100)
 wizard1.attack()
 archer1.attack()
 # print(wizard1.sign_in())
+
+wizard1 = Wizard('Merlin', 60)
+
+print(isinstance(wizard1, object))
