@@ -1,11 +1,12 @@
-from modules.utility import multiply, divide
-from modules.shopping.more_shopping import shopping_cart
+import random
 
-# Only runs if the current file is ran.
-if __name__ == '__main__':
-    print(shopping_cart.buy('apple'))
-    print(divide(5, 2))
-    print(multiply(5, 2))
-    print(max([1,2,3]))
+print(random)
+# help(random)
+print(dir(random))  # All the methods on random
+print(random.random())  # Any random nummber between 0 and 1
+print(random.randint(1, 10))  # Random int between start and finish
+print(random.choice([1, 2, 3, 4, 5]))
 
-    print('please run this')
+my_list = [1, 2, 3, 4, 5]
+random.shuffle(my_list)
+print(my_list)
