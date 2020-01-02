@@ -14,8 +14,8 @@
 #
 #
 # read | This is a standard way to read the file.
-with open('app/sad.txt', mode='r') as my_file:
-    print(my_file.read())
+# with open('app/sad.txt', mode='r') as my_file:
+#     print(my_file.read())
 
 # write | overrides the existing or creates new file.
 # with open('test.txt', mode='w') as my_file:
@@ -34,3 +34,13 @@ with open('app/sad.txt', mode='r') as my_file:
 # with open('test.txt', mode='a') as my_file:
 #     text = my_file.write(':)')
 #     print(text)
+
+try:
+    with open('sad.txt', mode='x') as my_file:
+        print(my_file.read())
+except FileNotFoundError as err:
+    print('file does not exist')
+    raise err
+except IOError as err:
+    print('IO error')
+    raise err
