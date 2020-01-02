@@ -1,5 +1,6 @@
 import random
 
+
 print(random)
 # help(random)
 print(dir(random))  # All the methods on random
@@ -10,3 +11,8 @@ print(random.choice([1, 2, 3, 4, 5]))
 my_list = [1, 2, 3, 4, 5]
 random.shuffle(my_list)
 print(my_list)
+
+print('/////////////// Built-in Modules 2 ///////////////')
+import sys
+sys.argv
+print(sys)
