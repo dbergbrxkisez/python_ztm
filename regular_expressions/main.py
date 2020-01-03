@@ -1,8 +1,12 @@
+# https://www.w3schools.com/python/python_regex.asp
+# https://regex101.com
+
 import re
 
 # compile is going to allow us to get a pattern like 'this'.
 pattern = re.compile('this')
 pattern2 = re.compile('search this inside of this text please!')
+pattern3 = re.compile(r"([a-zA-Z]).([a])")  # r stands for raw string
 string = 'search this inside of this text please!'
 string2 = 'search this inside of this text please! Dbergbrxkisez'
 
@@ -37,6 +41,10 @@ print(a.end())                   # It tells me where it ends.
 print('.search()')
 a = pattern.search(string)
 print(a)
+a2 = pattern3.search(string2)
+print(a2.group())                 # I am searching for a letter followed by anything followed by letter a.
+print(a2.group(1))                # prints s
+print(a2.group(2))                # prints a
 
 # findall finds all the instances of the match.
 print('.findall()')
