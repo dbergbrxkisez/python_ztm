@@ -12,7 +12,7 @@ string2 = 'search this inside of this text please! Dbergbrxkisez'
 
 print('search' in string)
 
-# Returns the match object with all the detais.
+# Returns the match object with all the details.
 # span returns where it occurs in the string. which start at index of 17 and ends at 21.
 print(re.search('this', string))
 
