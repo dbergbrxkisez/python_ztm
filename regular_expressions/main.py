@@ -7,8 +7,11 @@ import re
 pattern = re.compile('this')
 pattern2 = re.compile('search this inside of this text please!')
 pattern3 = re.compile(r"([a-zA-Z]).([a])")  # r stands for raw string
+pattern4 = re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
 string = 'search this inside of this text please!'
 string2 = 'search this inside of this text please! Dbergbrxkisez'
+string3 = 'b@b.com'
+string4 = 'Dbergbrxkisez'
 
 print('search' in string)
 
@@ -31,9 +34,9 @@ print(a.start())
 
 # group returns the part of the string where, there was the match.
 # group is very useful when we are trying to do multiple searches.
-print(a.group())                 # we are going to return a match object or none if it doesn't exist in the string.
+print(a.group())  # we are going to return a match object or none if it doesn't exist in the string.
 
-print(a.end())                   # It tells me where it ends.
+print(a.end())  # It tells me where it ends.
 
 # Now I can use pattern everywhere and use methods on it.
 
@@ -42,19 +45,19 @@ print('.search()')
 a = pattern.search(string)
 print(a)
 a2 = pattern3.search(string2)
-print(a2.group())                 # I am searching for a letter followed by anything followed by letter a.
-print(a2.group(1))                # prints s
-print(a2.group(2))                # prints a
+print(a2.group())  # I am searching for a letter followed by anything followed by letter a.
+print(a2.group(1))  # prints s
+print(a2.group(2))  # prints a
 
 # findall finds all the instances of the match.
 print('.findall()')
-b = pattern.findall(string)       # both instances of 'this' inside of a list.
+b = pattern.findall(string)  # both instances of 'this' inside of a list.
 print(b)
 
 # in order to fullmatch to return a match it has to be the EXACT SAME STRING that we're searching.
 print('.fullmatch()')
-c = pattern.fullmatch(string)     # returns none if it not the match
-c2 = pattern2.fullmatch(string)   # returns the match object
+c = pattern.fullmatch(string)  # returns none if it not the match
+c2 = pattern2.fullmatch(string)  # returns the match object
 c3 = pattern2.fullmatch(string2)  # returns none because it's not the full match.
 print(c2)
 print(c3)
@@ -65,3 +68,9 @@ d = pattern2.match(string)
 print(d)
 d2 = pattern2.match(string2)
 print(d2)
+
+# email validation with regex
+a3 = pattern4.search(string3)  # gives a matching object.
+print(a3)
+a4 = pattern4.search(string4)  # returns None (if there is no matching object then tell them sorry try again.)
+print(a4)
