@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/dbergbrxkisez/PROJECTS/python_ztm/web_development_with_python/web server/bin/python3" "$0" "$@"
+'''exec' "/Users/dbergbrxkisez/Desktop/web server/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

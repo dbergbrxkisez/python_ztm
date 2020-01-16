@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/dbergbrxkisez/PROJECTS/python_ztm/web_development_with_python/web server"
+VIRTUAL_ENV="/Users/dbergbrxkisez/Desktop/web server"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
